@@ -5,6 +5,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import it.alfasoft.fabrizio.model.Rubrica;
+import it.alfasoft.fabrizio.utility.HibernateUtil;
 
 
 
