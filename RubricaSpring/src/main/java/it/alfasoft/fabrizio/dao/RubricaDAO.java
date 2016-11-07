@@ -7,6 +7,7 @@ import org.hibernate.Transaction;
 import it.alfasoft.fabrizio.model.Rubrica;
 
 
+
 public class RubricaDAO {
 
 	// 1- Create
