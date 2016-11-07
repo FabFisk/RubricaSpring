@@ -1,6 +1,7 @@
 package it.alfasoft.fabrizio.service;
 
 import it.alfasoft.fabrizio.dao.RubricaDAO;
+import it.alfasoft.fabrizio.dao.VoceDAO;
 import it.alfasoft.fabrizio.model.Rubrica;
 import it.alfasoft.fabrizio.model.Voce;
 

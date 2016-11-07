@@ -19,9 +19,7 @@ public class MainTest {
 		v.setTelefono("111111");
 		v.setRubrica(r);
 		
-		r.addVoce(v);
-		
-		g.createVoce(v);
+		g.createVoce(r, v);
 		
 
 	}
