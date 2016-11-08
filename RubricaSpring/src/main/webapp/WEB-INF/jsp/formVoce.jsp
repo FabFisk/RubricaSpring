@@ -8,10 +8,11 @@
 </head>
 <body>
 	<form action="aggiungiVoce" method="post">
-		<input type="text" name="nome"/>
-		<input type="text" name="cognome"/>
-		<input type="text" name="telefono"/>
+		<input type="text" name="nome" placeholder="nome"/>
+		<input type="text" name="cognome" placeholder="cognome"/>
+		<input type="text" name="telefono" placeholder="telefono"/>
 		<input type="submit" value="registra!"/>
 	</form>
+	<a href="../RubricaSpring/index.jsp">Back Home</a>
 </body>
 </html>

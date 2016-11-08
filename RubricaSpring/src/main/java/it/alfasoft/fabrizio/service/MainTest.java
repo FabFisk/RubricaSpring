@@ -13,13 +13,13 @@ public class MainTest {
 		
 		g.createRubrica(r);
 		
-		Voce v = new Voce();
-		v.setNome("Tizio");
-		v.setCognome("Caio");
-		v.setTelefono("111111");
-		v.setRubrica(r);
-		
-		g.createVoce(r, v);
+//		Voce v = new Voce();
+//		v.setNome("Tizio");
+//		v.setCognome("Caio");
+//		v.setTelefono("111111");
+//		v.setRubrica(r);
+//		
+//		g.createVoce(r, v);
 		
 
 	}

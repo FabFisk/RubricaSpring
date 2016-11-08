@@ -1,5 +1,7 @@
 package it.alfasoft.fabrizio.service;
 
+import java.util.List;
+
 import it.alfasoft.fabrizio.dao.RubricaDAO;
 import it.alfasoft.fabrizio.dao.VoceDAO;
 import it.alfasoft.fabrizio.model.Rubrica;
@@ -15,10 +17,18 @@ public class Gestione {
 	}
 
 	public void createVoce(Rubrica r, Voce v) {
+		v.setRubrica(r);
 		vDAO.creaVoce(v);
 		r.addVoce(v);
 		rDAO.aggiornaRubrica(r);
 		
+	}
+	public Rubrica cercaRubrica(long id){
+		return rDAO.readRubrica(id);
+	}
+
+	public List<Voce> getAll(Rubrica r) {
+		return vDAO.getAll(r);
 	}
 
 

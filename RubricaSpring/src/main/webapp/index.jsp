@@ -9,6 +9,6 @@
 </head>
 <body>
 	<a href="formVoce.html">Aggiungi nuova voce</a>
-	<a href="elencoVoci">Elenco voci</a>
+	<a href="elencoVoci.html">Elenco voci</a>
 </body>
 </html>

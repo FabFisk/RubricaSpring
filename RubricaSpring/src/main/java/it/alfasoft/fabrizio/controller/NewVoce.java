@@ -1,5 +1,6 @@
 package it.alfasoft.fabrizio.controller;
 
+import it.alfasoft.fabrizio.model.Rubrica;
 import it.alfasoft.fabrizio.model.Voce;
 import it.alfasoft.fabrizio.service.Gestione;
 
@@ -12,11 +13,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class NewVoce {
-
+	
+	Gestione g  = new Gestione();
 	
 	@RequestMapping(value="/formVoce.html",method=RequestMethod.GET)
 	public ModelAndView chidereForm(){
-		System.out.println("ciao");
+		//System.out.println("ciao");
 		ModelAndView model=new ModelAndView("formVoce");
 		
 		return  model;
@@ -29,12 +31,9 @@ public class NewVoce {
 			ModelAndView model=new ModelAndView("formVoce");
   			return  model;			
 			}
-//			Gestione g = new Gestione();
-//			g.createVoce(r, v);
+			Rubrica r = g.cercaRubrica(1);
+			g.createVoce(r, voce);
 			ModelAndView model=new ModelAndView("formVoce");
 			return  model;
 	}
-	
-	
-	
 }

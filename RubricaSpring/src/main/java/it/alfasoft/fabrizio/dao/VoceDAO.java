@@ -1,5 +1,8 @@
 package it.alfasoft.fabrizio.dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -67,6 +70,26 @@ public class VoceDAO {
 			session.close();
 		}	
 		return v;	
+	}
+	
+	public List<Voce> getAll(Rubrica r){
+		List<Voce> voci = new ArrayList<Voce>();
+		Session session = HibernateUtil.openSession();
+		Transaction tx = null;
+		try{
+			tx = session.getTransaction();
+			tx.begin();
+			Query query = session
+					.createQuery("from Voce where rubrica_id_rubrica=:rubricaScelta");
+			query.setLong("rubricaScelta", r.getId_rubrica());
+			voci = (List<Voce>) query.list();
+			tx.commit();
+		}catch(Exception ex){
+			tx.rollback();
+		}finally{
+			session.close();
+		}	
+		return voci;	
 	}
 	
 	//3- Update
